@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    name: `Hello Typescript World!`,
-    tagline: `Gatsby + SASS + Typescript = 💪`
-  },  
+    name: `Hello Mirage World!`,
+    tagline: `Gatsby + SASS + Typescript + Mirage = 💪`
+  },
   plugins: [
     `gatsby-plugin-sass`,
     `gatsby-plugin-typescript`,
