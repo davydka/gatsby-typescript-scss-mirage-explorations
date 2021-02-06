@@ -61,4 +61,6 @@ typings/
 public
 yarn-error.log
 
+build/mirage
+
 README.html

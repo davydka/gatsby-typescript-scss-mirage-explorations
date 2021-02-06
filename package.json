@@ -8,10 +8,15 @@
     "dev": "gatsby develop",
     "clean": "gatsby clean",
     "build": "gatsby build",
-    "serve": "gatsby serve"
+    "serve": "gatsby serve",
+    "mirage": "npm-run-all build-mirage serve-mirage",
+    "build-mirage": "npm-run-all clean-mirage transpile-mirage",
+    "transpile-mirage": "babel ./server --out-dir build/mirage",
+    "clean-mirage": "rimraf build/mirage",
+    "serve-mirage": "node ./build/mirage/index.js"
   },
   "dependencies": {
-    "@babel/core": "^7.5.5",
+    "@babel/core": "^7.12.13",
     "gatsby": "^2.13.28",
     "gatsby-plugin-sass": "^2.1.3",
     "gatsby-plugin-typescript": "^2.1.2",
@@ -22,8 +27,11 @@
     "webpack": "^4.36.1"
   },
   "devDependencies": {
+    "@babel/cli": "^7.12.13",
+    "@babel/preset-env": "^7.12.13",
     "gatsby-plugin-tslint": "^0.0.2",
     "miragejs": "^0.1.41",
+    "npm-run-all": "^4.1.5",
     "tslint": "^5.18.0",
     "tslint-loader": "^3.5.4",
     "tslint-react": "^4.0.0"
